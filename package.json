@@ -1,0 +1,24 @@
+{
+  "name": "monkeyify",
+  "version": "0.0.1",
+  "description": "Monkey patch factory",
+  "main": "monkeyify.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zenboss/monkeyify.git"
+  },
+  "keywords": [
+    "monkey",
+    "patch",
+    "factory"
+  ],
+  "author": "ZenWANG",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zenboss/monkeyify/issues"
+  },
+  "homepage": "https://github.com/zenboss/monkeyify#readme"
+}
