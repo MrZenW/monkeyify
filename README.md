@@ -4,7 +4,7 @@ Monkey patch factory
 ## API
 **By monkeyify the atob function let atob support base64 url**
 ```javascript
-window.atob = monkeyif(window.atob, {
+window.atob = monkeyify(window.atob, {
   caller: {name: 'I am the caller, I will be given in the first argument in monkey function'},
   allowMonkeyInMonkey: 'return old monkey'; // true or 'return old monkey'
   monkey: function (caller, args, original) {
@@ -20,7 +20,7 @@ window.atob = monkeyif(window.atob, {
   }
 });
 // or
-window.atob = monkeyif(window.atob, function () {
+window.atob = monkeyify(window.atob, function () {
 // your code
 });
 ```
