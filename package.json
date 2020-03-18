@@ -1,6 +1,6 @@
 {
   "name": "monkeyify",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Monkey patch factory",
   "main": "monkeyify.js",
   "scripts": {
@@ -11,6 +11,7 @@
     "url": "git+https://github.com/zenboss/monkeyify.git"
   },
   "keywords": [
+    "monkey-patch",
     "monkey",
     "patch",
     "factory"

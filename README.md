@@ -5,8 +5,15 @@ Monkey patch factory
 **By monkeyify the atob function let atob support base64 url**
 ```javascript
 window.atob = monkeyify(window.atob, {
-  caller: {name: 'I am the caller, I will be given in the first argument in monkey function'},
-  allowMonkeyInMonkey: 'return old monkey'; // true or 'return old monkey'
+
+// bind a caller, the default is the caller when the monkeyify function is called
+  caller: window,
+
+  // true(To monkeyify a monkeyifyed function is allowed)
+  // 'return old monkey'(Return the first monkeyifyed function when you want to monkeyify a monkeyifyed function)
+  allowMonkeyInMonkey: 'return old monkey';
+
+  // monkey patch function. caller, args array and the original function
   monkey: function (caller, args, original) {
     var base64url = args[0];
     var d = 4 - base64url.length % 4;

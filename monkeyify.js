@@ -29,7 +29,7 @@
 
   function monkeyify(originalFunction, patchOpt) {
     if (!_isFunction(originalFunction)) throw new Error('Cannot monkeyify a non-function variable! ⊂((≧⊥≦))⊃～');
-    if ('function' === typeof patchOpt) patchOpt = { monkey: patchOpt };
+    if (_isFunction(patchOpt)) patchOpt = { monkey: patchOpt };
     var hasCaller = Object.prototype.hasOwnProperty.call(patchOpt, 'caller');
     var _patchFunc = patchOpt.monkey;
     var _allowMonkeyInMonkey = patchOpt[KEY__ALLOW_MONKEY_IN_MONKEY];
