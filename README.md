@@ -2,8 +2,10 @@
 Monkey patch factory
 
 ## API
-**By monkeyify the atob function let atob support base64 url**
+
 ```javascript
+
+// demo: By monkeyify the atob function let atob support base64 url
 window.atob = monkeyify(window.atob, {
 
 // bind a caller, the default is the caller when the monkeyify function is called
